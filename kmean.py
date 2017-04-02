@@ -2,6 +2,7 @@
 # Python 
 # Zixiang Liu
 
+import matplotlib.pyplot as plt
 import numpy as np
 import random
 import sys
@@ -10,9 +11,22 @@ import sys
 This program read a output file that each row is a list of number of appearance in one blog
 then use k-means to calculate it clusters
 '''
-num_cluster = 4
+num_cluster_default = 4
+wordstart_default = 0
+wordend_default = 100
+same_k_repeat = 1000
 
-filename = input("\nDefault file output.txt\nPress Enter to select default file.\nEnter the file name: ") or "output.txt"
+# print("Press Enter to select default.")
+# num_cluster = input("Please enter K(default {}):".format(num_cluster_default)) or num_cluster_default
+# wordstart = input("Please enter word start index(default {}):".format(wordstart_default)) or wordstart_default
+# wordend = input("Please enter word end index(default {}):".format(wordend_default)) or wordend_default
+# filename = input("\nDefault file output.txt\nPress Enter to select default file.\nEnter the file name: ") or "output.txt"
+
+num_cluster = num_cluster_default
+wordstart = wordstart_default
+wordend = wordend_default
+filename = "output.txt"
+
 inputfile = open(filename, "r")
 wordlist = []
 bloglist = []
@@ -26,7 +40,7 @@ with inputfile as filestream:
 			first = False
 		else:
 			blog = []
-			for count in linelist:
+			for count in linelist[wordstart:wordend]:
 				blog.append(float(count))
 			bloglist.append(blog)
 
@@ -41,8 +55,46 @@ def blog_dist(blog1, blog2):
 		distance += (blog1[i] - blog2[i])**2
 	return distance
 
+
+'''
+Term frequency:
+augmented frequency
+'''
+def tf(somelist):
+	for onelist in somelist:
+		maxf = max(onelist)
+		if maxf != 0:
+			for i in range(0, len(onelist)):
+				onelist[i] = 0.5 + 0.5 * onelist[i] / maxf
+		else:
+			break;
+	return somelist
+
+
+'''
+tf–idf
+tf * idf
+Inverse document frequency:
+inverse document frequency smooth
+use tfidfs(tf(somelist)) to work
+'''
+def tfidfs(somelist):
+	N = len(somelist)
+	somelist = np.array(somelist)
+	for i in range(0, len(somelist[0])):
+		# start with 1 to make it smooth and none zero
+		nt = 1
+		for j in range(0, N):
+			if somelist[:,i][j] != 0.5:
+				nt += 1
+		idfs = np.log(N/nt)
+		for j in range(0, N):
+			somelist[:,i][j] += idfs
+	return somelist
+
 '''
 normalize data
+(i-u)/std
 '''
 def normalizer(totallist, debugging = False):
 	totallength = len(totallist[0])
@@ -58,12 +110,25 @@ def normalizer(totallist, debugging = False):
 	return totallist
 
 '''
+Sum of distance to pivot centers
+'''
+def distsumer(pivots, inputlist, group):
+	sumofdist = 0
+	for key, value in group.items():
+		for index in value:
+			sumofdist += blog_dist(pivots[key], inputlist[index])
+	return sumofdist
+
+
+
+'''
 calculate the k-means cluster
 '''
 def kmean_cal(num_cluster, inputlist, dist, max_iter = 300, debugging = False):
 	length = len(inputlist)
 	# each pivot is an list
 	pivots = [inputlist[i] for i in random.sample(range(len(inputlist)), num_cluster)]
+	distsum = 0
 
 	# group is a dictionary of clusters, key pivot index, value is a list of input list index
 	group = {}
@@ -93,6 +158,7 @@ def kmean_cal(num_cluster, inputlist, dist, max_iter = 300, debugging = False):
 		# condition of convergence, if new iteration did not change items in cluster
 		if group == old_group:
 			num_of_iter = i
+			distsum = distsumer(pivots, inputlist, group)
 			if debugging:
 				print("New iteration did not change cluster, end of iteration\n")
 			break;
@@ -111,11 +177,29 @@ def kmean_cal(num_cluster, inputlist, dist, max_iter = 300, debugging = False):
 
 		if debugging:
 			print("End of iteration No.{}\n\n".format(i))
-	return group, num_of_iter
+		distsum = distsumer(pivots, inputlist, group)
+	return group, pivots, num_of_iter, distsum
 
-bloglist = normalizer(bloglist)
-outputdict, num_of_iter = kmean_cal(num_cluster, bloglist, blog_dist, debugging = False)
-for key, value in outputdict.items():
-	print("Cluster No.{} has blog {}".format(key, value))
+bloglist = tfidfs(tf(bloglist))
+output = []
+klist = range(1, len(bloglist))
+distsumlist = []
+for num_cluster in klist:
+	outputtemp = []
+	outputmin = [0, 0, 0, sys.maxsize]
+	for i in range(0,same_k_repeat):
+		outputtemp = kmean_cal(num_cluster, bloglist, blog_dist, debugging = False)
+		if outputtemp[3] < outputmin[3]:
+			outputmin = outputtemp
+	distsumlist.append(outputmin[3])
 
+plt.plot(klist, distsumlist)
+plt.title("Try to find elbow")
+plt.xlabel("k")
+plt.ylabel("sum of distance")
+plt.show()
+# outputdict, pivots, num_of_iter, sumofdist = output
+# for key, value in outputdict.items():
+# 	print("Cluster No.{} has blog {}".format(key, value))
+# print("Went through {} iterations.".format(num_of_iter))
 
