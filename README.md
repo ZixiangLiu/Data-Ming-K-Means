@@ -8,7 +8,22 @@ I will use this updated output.txt for further computation.
 
 I also output iteration times and calculation times in files to find the reason why K-means ++ is slower. Here is the files:
 
+#### time_word100_repeat1_iterate
+for the first 100 words, for k = 1 to k = 31, each k run 1 time. the times are given in the format that:
+   0.00002    0.00648    0.00650    0.00677    1.00000    1.00000
+number 1: the time to calculate centers, in seconds
+number 2: the time to get results, K-means++
+number 3: the time to get results, K-means random centers
+number 4: the iterations of K-means++
+number 5: the iterations of K-means random centers
 
+#### time_word2000_repeat1_iterate
+similar to the previous file but using first 2000 words
+
+#### time_word9500_repeat1_iterate
+similar to the previous file but using first 9500 words
+
+The result hardly change with more words.
 
 ## The below part is from master branch
 K-means ++ is implemented in this branch, but it is extremely slow. I compared my K-means running time to sklearn's K-means under same data, my random center K-means used 32 seconds on average, sklearn used 1 second, my K-means ++ used 182 seconds. Covergency condition in my K-means ++ may need update.
