@@ -7,6 +7,9 @@ tf-idf normalization is used to preprocess the data. The implemented K-means alg
 
 Interestingly, the K-means++ algorithm is significantly slower than random center K-means. It is highly possible that because of the small size, the time saved in reduced times of iteration cannot compensate the time used in calculating seed. 
 
+### feedlist.txt
+The list of urls from which blogs are get. Some of them does not work.
+
 ### dropword.txt
 These are the most common words used in English, copied from wiki
 These words are dropped from the list to because they are too frequent to be a good indicator which split blogs into different categories.
