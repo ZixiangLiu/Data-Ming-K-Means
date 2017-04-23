@@ -46,6 +46,8 @@ with inputfile as filestream:
 
 '''
 calculate the distance between two blogs
+input:	blog1, blog2: two lists of numbers
+output:	distance = sum of square of difference
 '''
 def blog_dist(blog1, blog2):
 	if len(blog1) != len(blog2):
@@ -59,6 +61,8 @@ def blog_dist(blog1, blog2):
 '''
 Term frequency:
 augmented frequency
+input:	one list of numbers, one blog in this program
+output:	normalized list
 '''
 def tf(somelist):
 	for onelist in somelist:
@@ -77,6 +81,8 @@ tf * idf
 Inverse document frequency:
 inverse document frequency smooth
 use tfidfs(tf(somelist)) to work
+input:	one list of numbers, one blog in this program
+output:	normalized list
 '''
 def tfidfs(somelist):
 	N = len(somelist)
@@ -95,6 +101,9 @@ def tfidfs(somelist):
 '''
 normalize data
 (i-u)/std
+input:	totallist:	list of smaller lists, each smaller list is a blog, containning numbers as frequencies
+	debugging:	boolean, set true to print info while running
+output: nomalized totallist
 '''
 def normalizer(totallist, debugging = False):
 	totallength = len(totallist[0])
@@ -111,6 +120,10 @@ def normalizer(totallist, debugging = False):
 
 '''
 Sum of distance to pivot centers
+input:	pivots:		centers of the K-means algorithm
+	inputlist:	list of smaller lists, each smaller list is a blog, containning numbers as frequencies
+	group:		dictionary, key is pivots index, value is list of inputlist indexes in that cluster
+output: sum of distances in each group
 '''
 def distsumer(pivots, inputlist, group):
 	sumofdist = 0
@@ -123,6 +136,15 @@ def distsumer(pivots, inputlist, group):
 
 '''
 calculate the k-means cluster
+input:	num_cluster:	number of clusters
+	inputlist:	list of smaller lists, each smaller list is a blog, containning numbers as frequencies
+	dist:		function to calculate distance between two blogs
+	max_iter:	max times of iteration before abortion, default 300
+	debugging:	boolean, true to print info while running
+output:	group:		dictionary, key is pivots index, value is list of inputlist indexes in that cluster
+	pivots:		centers of the K-means algorithm
+	num_of_iter:	total number of iteration to get the output
+	distsum:	sum of each blog's distance to its corresponding center of the result
 '''
 def kmean_cal(num_cluster, inputlist, dist, max_iter = 300, debugging = False):
 	length = len(inputlist)
