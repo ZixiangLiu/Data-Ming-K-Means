@@ -1,6 +1,6 @@
 '''
 python program to take a txt, and output a txt
-change the form of words from "A · B · C"
+change the form of words from "A · B · C" form
 to "A\nB\nC"
 '''
 
