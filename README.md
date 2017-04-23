@@ -1,12 +1,9 @@
 # K-means implementation using Python
 
 ## modification in this branch
-K-means ++ is implemented in this branch.
-But it is extremely slow
-compared my K-means running time to sklearn's K-means under same data, my random center K-means used 32 seconds on average, sklearn used 1 second, my K-means ++ used 182 seconds. 
-Covergency condition in my K-means ++ may need update.
+K-means ++ is implemented in this branch, but it is extremely slow. I compared my K-means running time to sklearn's K-means under same data, my random center K-means used 32 seconds on average, sklearn used 1 second, my K-means ++ used 182 seconds. Covergency condition in my K-means ++ may need update.
 
-
+## The below part is from master branch
 The Data is acquired from 31 online blogs. The comtents of the blogs are splited, and only english words in the article is recognized. Upon counting the frequencies of each word in each blog, a matrix of word count is generated. Output.txt is the file that shores such information. 
 
 tf-idf normalization is used to preprocess the data. The implemented K-means algorithm used random centers at the beginning and a K-means++ is also updated. The distance is the sum of square of the difference in two blogs of each word count(normalized). 
