@@ -11,14 +11,15 @@ wnl = WordNetLemmatizer()
 # import numpy as np
 # word_list is the list of all English words
 
-'''
-Used to parse a long string of Html and recognize all the words in it
-count the total appearance time of each word and store in dictionary list_in
-input:	str_in: input string that need to be analyzed, will be splited by space
-	list_in:a dictionary, store the frequency, key is the word, value is the frequency in that blog
-'''
-
 def getwords(str_in, list_in, dropwords):
+	'''
+	Used to parse a long string of Html and recognize all the words in it
+	count the total appearance time of each word and store in dictionary list_in
+
+	Args:
+		str_in (string): input string that need to be analyzed, will be splited by space
+		list_in (dictionary): store the frequency, key is the word, value is the frequency in that blog
+	'''
 	record = False # initialize the recording situation
 	string = "" # initialize string
 	for i in str_in:
@@ -34,14 +35,18 @@ def getwords(str_in, list_in, dropwords):
 			if i.isalpha() or i ==' ' or i == '\'': # only record the letters and space and '
 				string += i
 
-'''
-function used to count the times of appearance of a word in the dictionary
-input:	someword:	input word that need to be added
-	list_in:	a dictionary, store the frequency, key is the word, value is the frequency in that blog
-	dropwords: 	a list of words that user wish to drop from the input
-update: dropwords are added to the function
-'''
+
 def addwordtodic(someword, list_in, dropwords=[]):
+	'''
+	function used to count the times of appearance of a word in the dictionary
+
+	Args:
+		someword:	input word that need to be added
+		list_in:	a dictionary, store the frequency, key is the word, value is the frequency in that blog
+		dropwords: 	a list of words that user wish to drop from the input
+	Return:
+		dropwords are added to the function
+	'''
 	word = someword.lower()
 	word = wnl.lemmatize(word)
 	if word in list_in.keys(): # if the dictionary has the key, count
@@ -61,7 +66,7 @@ with dropwordfile as filestream:
 		dropwords.append(line.lower()[:-1])
 
 word_list = [word for word in word_list if not word in dropwords]
-print(len(word_list))
+# print(len(word_list))
 
 '''
 The main functioning part
@@ -69,8 +74,10 @@ input a file, read all the urls, open and count their words
 output to a txt
 '''
 all_dictionary = [] # initialize dictionary, a list of dictionaries
+urls = [] # list to store urls
 
-filename = input("\nDefault file feedlist.txt\nPress Enter to select default file.\nEnter the file name: ") or "feedlist.txt"
+# input("\nDefault file feedlist.txt\nPress Enter to select default file.\nEnter the file name: ") or 
+filename ="feedlist.txt"
 url = open(filename, "r")
 num_of_url = 0 # count the total number of urls
 with url as filestream:
@@ -84,15 +91,20 @@ with url as filestream:
 					if 'value' in i['content'][x].keys(): # if the content has value, or has an article
 						getwords(i['content'][x]['value'], one_dictionary, dropwords)
 		if(one_dictionary):
+			urls.append(line)
 			all_dictionary.append(one_dictionary) # add the current dictionary to the list
 url.close()
 
-'''
-Combine a list of dictionaries into a large dictionary
-input:	all_dictionary:		a list of dictionaries of each blog
-output:	large_dictionary:	one dicionaries that has word as the key, and  a list of frequencies of that word in each blog
-'''
+
 def combinedictionary(all_dictionary):
+	'''
+	Combine a list of dictionaries into a large dictionary
+
+	Args:
+		all_dictionary:		a list of dictionaries of each blog
+	Return:
+		large_dictionary:	one dicionaries that has word as the key, and  a list of frequencies of that word in each blog
+	'''
 	large_dictionary = {}
 	length = len(all_dictionary)
 	for i in range(0, length): # i indicates the index of the blog
@@ -111,24 +123,38 @@ large_dictionary = combinedictionary(all_dictionary)
 # 
 outputfile= open("output.txt", "w")
 
-'''
-this function write one word and its frequencies in each blog in rows
-and frequencies of each word in one blog in columns
-a transpose of the previous function
-'''
+	
 def rowWordcolTimes(outputfile, large_dictionary):
+	'''
+	this function write one word and its frequencies in each blog in rows
+	and frequencies of each word in one blog in columns
+	a transpose of the previous function
+	
+	Args:
+		outputfile (file): the file to write
+	Return:
+		large_dictionary (dictionary): key is word, value is list of float
+			discribe the frequncy of words in all dictionary
+	'''
 	for word, time in large_dictionary.items():
 		outputfile.write("{:<30}".format(word))
 		for i in time:
 			outputfile.write("{:>5}".format(i))
 		outputfile.write('\n')
 
-'''
-this function write one word and its frequencies in each blog in columns
-and frequencies of each word in one blog in rows
-a transpose of the previous function
-'''
+	
 def rowTimescolWord(outputfile, large_dictionary):
+	'''
+	this function write one word and its frequencies in each blog in columns
+	and frequencies of each word in one blog in rows
+	a transpose of the previous function
+
+	Args:
+		outputfile (file): the file to write
+	Return:
+		large_dictionary (dictionary): key is word, value is list of float
+			discribe the frequncy of words in all dictionary
+	'''
 	for word in large_dictionary:
 		outputfile.write("{:<30}".format(word))
 	outputfile.write('\n')
@@ -156,5 +182,9 @@ while True:
 		print("please enter \"row\" or \"col\"")
 
 
+outputfile.close()
+outputfile= open("url.txt", "w")
+for i in range(0, len(urls)):
+	outputfile.write("{} {}\n".format(i, urls[i]));
 outputfile.close()
 

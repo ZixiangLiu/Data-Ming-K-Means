@@ -325,6 +325,18 @@ def kmean_cal(num_cluster, inputlist, dist, max_iter = 300, debugging = False):
 
 bloglist = tfidfs(tf(bloglist))
 
+def write_group(file, groups):
+	length = len(groups)
+	file.write("K = {}:\n".format(length))
+	# for i in range(0, length):
+	# 	file.write("{:3d} ".format(i))
+	# 	for j in groups[i]:
+	# 		file.write("{:3d}".format(j))
+	# 	file.write("\n")
+	for i in range(0, length):
+		file.write("{:3d} {}\n".format(i, groups[i]))
+	file.write("\n\n")
+
 output = []
 klist = range(1, len(bloglist)+1)
 myt = []
@@ -334,24 +346,28 @@ kiter = []
 centt = []
 calt = []
 kmeant = []
+group_result = open("groups.txt", "w")
 for num_cluster in klist:
 	start = time.time()
 	outputtemp = []
 	outputmin = [0, 0, 0, sys.maxsize]
 	for i in range(0,same_k_repeat): 
-		outputtemp = kmeanpp_cal(num_cluster, bloglist, blog_dist, debugging = False)
-		centt.append(outputtemp[4])
-		calt.append(outputtemp[5])
-		kppiter.append(outputtemp[2])
-		if outputtemp[3] < outputmin[3]:
-			outputmin = outputtemp
+		# outputtemp = kmeanpp_cal(num_cluster, bloglist, blog_dist, debugging = False)
+		# centt.append(outputtemp[4])
+		# calt.append(outputtemp[5])
+		# kppiter.append(outputtemp[2])
+		# if outputtemp[3] < outputmin[3]:
+		# 	outputmin = outputtemp
+		# group_result.write("K-means ++ ")
+		# write_group(group_result, outputtemp[0])
 
 		outputtemp = kmean_cal(num_cluster, bloglist, blog_dist, debugging = False)
 		kmeant.append(outputtemp[4])
 		kiter.append(outputtemp[2])
 		if outputtemp[3] < outputmin[3]:
 			outputmin = outputtemp
-			
+		group_result.write("K-means ")
+		write_group(group_result, outputtemp[0])
 	distsumlist.append(outputmin[3])
 	myt.append(time.time()-start)
 
@@ -361,6 +377,7 @@ for i in [j-1 for j in klist]:
 for i in range(0, len(centt)):
 	outputfile.write("{:10.5f} {:10.5f} {:10.5f} {:10.5f} {:10.5f} {:10.5f}\n".format(centt[i], calt[i], centt[i]+calt[i], kmeant[i], kppiter[i], kiter[i]))
 outputfile.close()
+group_result.close()
 
 
 

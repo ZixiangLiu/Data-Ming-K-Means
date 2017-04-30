@@ -1,0 +1,66 @@
+0 http://feeds.feedburner.com/37signals/beMH
+sinal vs noise: news
+1 http://blog.outer-court.com/rss.xml
+google blog: google
+2 http://gofugyourself.typepad.com/go_fug_yourself/index.rdf
+Celebslam: model, actors
+3 http://feeds.feedburner.com/GoogleOperatingSystem
+Google operation System: google
+4 http://headrush.typepad.com/creating_passionate_users/index.rdf
+Creating Passionate Users: sort of news
+5 http://joi.ito.com/index.rdf
+Joi Ito’s Web: news
+6 http://feeds.feedburner.com/Mashable
+Mashable: tech, cellphone
+7 http://moblogsmoproblems.blogspot.com/rss.xml
+viral Graden: people. news
+8 http://feeds.feedburner.com/paulstamatiou
+PaulStamatiou.com: tech, news
+9 http://radar.oreilly.com/index.rdf
+O’Reilly Radar: IT, AI, methods
+10 http://scobleizer.wordpress.com/feed/
+Scobleizer: personal
+11 http://sethgodin.typepad.com/seths_blog/index.rdf
+Seth Godin’s Blog on marketing: price, marketing
+12 http://thinkprogress.org/feed/
+thinkProgress: news
+13 http://feeds.feedburner.com/andrewsullivan/rApM
+The dish: dish, reading
+14 http://wilwheaton.typepad.com/wwdnbackup/index.rdf
+Wil Wheaton dot NET: personal
+15 http://www.blogmaverick.com/rss.xml
+blog maverick: VR, apple, president, tech
+16 http://www.boingboing.net/index.rdf
+boing boing: people, keyboard, book, table, animal, bioshock, beetle, everything
+17 http://www.buzzmachine.com/index.xml
+buzzmachine: apology, trump, personal, news, president
+18 http://feeds.copyblogger.com/Copyblogger
+copyblogger: social web, online, subscriptions, relation
+19 http://www.huffingtonpost.com/raw_feed_index.rdf
+the full feed from huffing: politics, people
+20 http://www.hyperorg.com/blogger/index.rdf
+joho the blog: wine, web, tech, data
+21 http://www.joelonsoftware.com/rss.xml
+joel on software: developer, web, software
+22 http://feeds.kottke.org/main
+kottke.org: news, web
+23 http://www.lifehack.org/feed/
+lifehack: news, you, links
+24 http://www.mattcutts.com/blog/feed/
+matt cutts: Gadgets: google, tech, digital
+25 http://www.mezzoblue.com/rss/index.xml
+mezzoblue: tech, web, news, personal
+26 http://www.oilman.ca/feed/
+oilman: nothing
+27 http://www.perezhilton.com/index.xml
+perezhilton: people, trump
+28 http://www.plasticbag.org/index.rdf
+plasticbag.org: tech, links, yahoo, personal, people
+29 http://www.problogger.net/feed/
+problogger: write, blogger, web, http, blog
+30 http://www.schneier.com/blog/index.rdf
+schneier on security: web, privacy, cyberweapon
+31 http://www.stevepavlina.com/blog/feed
+steve pavlina: risk, personal
+32 http://www.tbray.org/ongoing/ongoing.rss
+ongoing by tim bray: personal, asian
