@@ -1,6 +1,6 @@
 # K-means implementation using Python
 
-## New modification (Week April 10)
+## New modification (Week April 30)
 Improved docstring in python files.
 
 Now kmeanspp.py has both K-means++ and ordinary K-means algorithm in it. The file is also revised to reduce main function size.
