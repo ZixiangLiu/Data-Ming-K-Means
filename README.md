@@ -1,6 +1,11 @@
 # K-means implementation using Python
 
-## modification in this branch (Week April 10)
+## New modification (Week April 10)
+Improved docstring in python files.
+
+Now kmeanspp.py has both K-means++ and ordinary K-means algorithm in it. The file is also revised to reduce main function size.
+
+## Modification in this branch (Week April 10)
 The getword.py is updated: used nltk to get only English words from nltk.corpus.words. The library has a total of 236736 words. By iterating through common words (dropwords) it reduced to 236594.
 
 The action reduced the output wordlist from 20787 to 9406 words. then updated nltk.stem.wordnet.WordNetLemmatizer to covert every word to its word root form. this further step increased word from 9406 to 9707. Manual check showed the some words originally in the third-person singular or past tense are translated to root form, then recognized by the library
