@@ -1,6 +1,11 @@
 # K-means implementation using Python
 
-## New modification (Week April 30)
+## New updates(Week May 28th)
+A new function that outputs top frequent words in each blog. 
+
+txt files are attached to show the results. It is clear that although blogs have very different frequent words, they all tends to be too small as their word frequencies are the same after several most frequent ones. 
+
+## Improved docstring (Week April 30)
 Improved docstring in python files.
 
 Now kmeanspp.py has both K-means++ and ordinary K-means algorithm in it. The file is also revised to reduce main function size.
