@@ -1,0 +1,99 @@
+Blog No.0:
+(pipe 3.32188), (schilling 3.33114), (downturn 3.33114), (skim 3.33114), (sump 3.34966), (cheesecake 3.36818), (drought 3.37743), (barry 3.42373), (seepage 3.45151), (waterproofing 3.52558), 
+
+Blog No.1:
+(excel 3.34040), (playable 3.34040), (unwanted 3.34040), (granddad 3.34040), (topical 3.34040), (karma 3.34040), (closure 3.34040), (unlisted 3.35892), (evolution 3.37743), (emperor 3.39595), 
+
+Blog No.2:
+(squirm 3.30336), (bourgeois 3.30336), (doctrinaire 3.30336), (imitate 3.30336), (deception 3.30336), (succinct 3.30336), (disguised 3.30336), (outnumber 3.30336), (phenotypic 3.30336), (snickering 3.30336), 
+
+Blog No.3:
+(solvent 3.34881), (windmill 3.34881), (alkane 3.34881), (vector 3.34881), (orthography 3.34881), (ethanol 3.34881), (interplanetary 3.34881), (polar 3.34881), (picker 3.37154), (gnome 3.37154), 
+
+Blog No.4:
+(tara 3.32419), (pitching 3.32419), (threshold 3.32419), (connectedness 3.32419), (moderator 3.32419), (innate 3.32419), (anonymously 3.32419), (mary 3.32419), (twittering 3.33461), (intermittent 3.34503), 
+
+Blog No.5:
+(remedial 3.32717), (holocaust 3.32717), (devastation 3.32717), (disability 3.35098), (outspoken 3.35098), (tod 3.35098), (eugenics 3.35098), (genome 3.39860), (whiplash 3.47003), (autism 3.51765), 
+
+Blog No.6:
+(misty 3.31829), (duo 3.31829), (insole 3.31829), (reviving 3.31829), (dressage 3.31829), (resign 3.31829), (marvel 3.31829), (crown 3.31829), (bathroom 3.32575), (godfather 3.32575), 
+
+Blog No.7:
+(extrovert 3.31229), (antique 3.31675), (radian 3.31675), (meng 3.32568), (introvert 3.32568), (saga 3.33015), (respondent 3.33015), (vibrant 3.33461), (lionel 3.33907), (batman 3.37479), 
+
+Blog No.8:
+(wire 3.32672), (breadboard 3.32672), (playback 3.33140), (disk 3.33607), (pi 3.33715), (sprint 3.34074), (mate 3.34308), (resistor 3.34775), (framer 3.34775), (transistor 3.35476), 
+
+Blog No.9:
+(incompatible 3.32060), (doll 3.32060), (paolo 3.32060), (approximately 3.32060), (sweeper 3.32060), (turk 3.32060), (confidential 3.32060), (causal 3.32060), (transcription 3.35508), (openness 3.38957), 
+
+Blog No.10:
+(digging 3.32090), (pacific 3.32090), (runway 3.32090), (napa 3.32090), (pete 3.32968), (residence 3.32968), (contextual 3.33845), (driver 3.33845), (freaky 3.44371), (spatial 3.47003), 
+
+Blog No.11:
+(racking 3.35892), (instruct 3.35892), (granite 3.35892), (rust 3.35892), (supplier 3.35892), (entropy 3.35892), (banjo 3.41447), (telltale 3.41447), (instinct 3.41447), (prediction 3.41447), 
+
+Blog No.12:
+(pollution 3.31882), (montana 3.31882), (legislation 3.31882), (protester 3.32398), (fossil 3.32398), (libel 3.33429), (pipeline 3.33429), (margin 3.36006), (yale 3.36522), (coal 3.38583), 
+
+Blog No.13:
+(interracial 3.31224), (trig 3.31224), (dissertation 3.31224), (catholic 3.31519), (poetry 3.31519), (vaccine 3.31815), (equality 3.31815), (lived 3.32111), (vaccination 3.32111), (poem 3.32407), 
+
+Blog No.14:
+(immaterial 3.31949), (supernatural 3.33562), (thingy 3.33562), (forgive 3.33562), (pasted 3.33562), (novelette 3.33562), (novella 3.33562), (herder 3.33562), (turner 3.41626), (warden 3.44852), 
+
+Blog No.15:
+(otolith 3.31576), (enclosure 3.31576), (sec 3.31989), (comply 3.31989), (liquidity 3.31989), (dizzy 3.32402), (establishment 3.32402), (vertigo 3.32402), (dizziness 3.32402), (terrorism 3.32402), 
+
+Blog No.16:
+(periodic 3.34503), (beaver 3.34503), (arson 3.34503), (cattle 3.34503), (sniper 3.34503), (tee 3.34503), (emulator 3.34503), (residential 3.34503), (mantis 3.40753), (kirk 3.44919), 
+
+Blog No.17:
+(technologist 3.31949), (immigrant 3.32352), (grapple 3.32352), (convene 3.32352), (empathize 3.32352), (algorithmic 3.32352), (bigot 3.32755), (journalistic 3.33562), (squirrel 3.33562), (newsroom 3.33562), 
+
+Blog No.18:
+(famously 3.31447), (flaxman 3.31447), (proofreading 3.31447), (scooter 3.32003), (repurpose 3.32003), (empower 3.32003), (initiate 3.32558), (empowerment 3.33114), (unemployable 3.33669), (unity 3.33669), 
+
+Blog No.19:
+(chemical 3.33669), (filibuster 3.33669), (insufficient 3.33669), (corruption 3.33669), (slaughterhouse 3.33669), (pharmaceutical 3.33669), (siege 3.33669), (dover 3.33669), (operative 3.37003), (battleground 3.37003), 
+
+Blog No.20:
+(revered 3.34182), (synagogue 3.34182), (rabbi 3.34182), (sabbath 3.34182), (consult 3.36105), (iterative 3.36105), (boarding 3.36105), (orthodox 3.36105), (torah 3.39951), (cohort 3.41874), 
+
+Blog No.21:
+(underqualified 3.31071), (whatnot 3.31807), (infringement 3.31807), (manila 3.31807), (messing 3.31807), (ambiguity 3.31807), (patentable 3.31807), (override 3.31807), (monopoly 3.32542), (ide 3.33277), 
+
+Blog No.22:
+(humanist 3.32487), (temp 3.32487), (apprentice 3.33024), (van 3.33024), (nominated 3.33024), (mourning 3.33024), (copied 3.33562), (lamb 3.33562), (womb 3.34099), (capsule 3.34637), 
+
+Blog No.23:
+(strawberry 3.35981), (almond 3.36384), (mania 3.37191), (coconut 3.37594), (delicious 3.38804), (fenugreek 3.39610), (hypomania 3.42030), (yeast 3.42433), (spinach 3.55739), (avocado 3.80336), 
+
+Blog No.24:
+(directive 3.33907), (infer 3.33907), (predatory 3.33907), (costume 3.33907), (outperform 3.33907), (unsophisticated 3.33907), (rocking 3.33907), (subsidiary 3.33907), (cryptic 3.37479), (cleanse 3.37479), 
+
+Blog No.25:
+(atop 3.32968), (faint 3.32968), (bounding 3.32968), (hover 3.32968), (domination 3.32968), (verse 3.32968), (semantics 3.32968), (render 3.35599), (darn 3.38231), (alpha 3.40862), 
+
+Blog No.26:
+(slapping 3.31586), (snake 3.31586), (grasping 3.31586), (jackass 3.31586), (ya 3.32836), (neuralgia 3.32836), (trigeminal 3.32836), (blah 3.34086), (multiplier 3.34086), (oilman 3.34086), 
+
+Blog No.27:
+(gala 3.33669), (suspenseful 3.33669), (suicidal 3.33669), (unflinching 3.33669), (salter 3.33669), (derrick 3.33669), (dud 3.33669), (peaked 3.33669), (flick 3.33669), (mil 3.40336), 
+
+Blog No.28:
+(clench 3.32031), (childish 3.32031), (straighten 3.32031), (eighteen 3.32031), (sixty 3.32031), (physiotherapy 3.32031), (strangely 3.32031), (millimeter 3.32031), (fisting 3.32878), (eagle 3.36268), 
+
+Blog No.29:
+(authoritative 3.31262), (sol 3.31262), (comprehensive 3.31262), (resort 3.31879), (mat 3.32188), (panda 3.32188), (outreach 3.32188), (magnet 3.32805), (mastermind 3.33731), (roundup 3.34040), 
+
+Blog No.30:
+(vendor 3.34503), (calculus 3.34503), (infrared 3.38669), (binary 3.38669), (ass 3.38669), (posture 3.38669), (rhombus 3.38669), (lid 3.42836), (diamondback 3.42836), (squid 3.76169), 
+
+Blog No.31:
+(trio 3.31071), (succeeding 3.31071), (chess 3.31071), (dropping 3.31071), (styling 3.31071), (flee 3.31071), (perfection 3.31071), (stimulation 3.31807), (perfectionism 3.32542), (fasting 3.39895), 
+
+Blog No.32:
+(twitch 3.32060), (balcony 3.32060), (recreational 3.32060), (crocus 3.32922), (ledge 3.32922), (mosque 3.32922), (marcher 3.32922), (distinguished 3.32922), (canada 3.32922), (stew 3.36371), 
+
