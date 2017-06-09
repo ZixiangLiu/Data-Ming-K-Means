@@ -1,11 +1,7 @@
-# K-means implementation using Python
-I am trying to implement K-means in Python and optimize as much as possible. 
+# Hierarchical implementation using Python
+Used the same data as K-means, but Hierarchical clustering is easier when you do not know how many clusters to form. An optimized algorithm is already included in the python file and the running time is significantly lower than K-means(when K-means calculate K=2 to 32)
 
-The Data is acquired from 31 online blogs. The comtents of the blogs are splited, and only english words in the article is recognized. Upon counting the frequencies of each word in each blog, a matrix of word count is generated. Output.txt is the file that shores such information. 
-
-tf-idf normalization is used to preprocess the data. The implemented K-means algorithm used random centers at the beginning and a K-means++ is also updated. The distance is the sum of square of the difference in two blogs of each word count(normalized). 
-
-Interestingly, the K-means++ algorithm is significantly slower than random center K-means. It is highly possible that because of the small size, the time saved in reduced times of iteration cannot compensate the time used in calculating seed. 
+The three txt files are respectively outputs of two methods(intuitive one and optimized one, both hierarchical and both give the same result) and a record on time used. 
 
 ### feedlist.txt
 The list of urls from which blogs are get. Some of them does not work.
